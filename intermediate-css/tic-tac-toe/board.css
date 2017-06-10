@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+#board {
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+#board td {
+    height: 100px;
+    width: 100px;
+}
+
+.hMiddle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.vMiddle {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
