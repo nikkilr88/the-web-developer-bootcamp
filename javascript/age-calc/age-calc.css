@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #555;
+}
+
+body > section {
+    margin: 15px 0;
+}
+
+label {
+    color: #777;
+    font-weight: bold;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+}
+
+#days {
+    color: green;
+}
