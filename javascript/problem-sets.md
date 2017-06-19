@@ -13,3 +13,8 @@
 ### Functions
 
 - [repl.it link](https://repl.it/IpPB/2)
+
+
+### Arrays
+
+- [repl.it link](https://repl.it/IsWS/6)
