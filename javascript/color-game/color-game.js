@@ -1,21 +1,58 @@
-var colors = generateRandomColors(6);
+var numSquares = 6;
+var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll('.square');
 var pickedColor = pickColor();
 var colorDisplay = document.querySelector('#color-display');
 var messageDisplay = document.querySelector('#message');
 var h1 = document.querySelector('h1');
 var resetBtn = document.querySelector('#reset');
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector('#hardBtn');
 
-resetBtn.addEventListener('click', function() {
-    colors = generateRandomColors(6);
+easyBtn.addEventListener('click', function() {
+    numSquares = 3;
+    this.classList.add('selected');
+    hardBtn.classList.remove('selected');
+    colors = generateRandomColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
 
     for (var i = 0; i < squares.length; i++) {
-        //Add initial colors to square
+        if (colors[i]) {
+            squares[i].style.backgroundColor = colors[i];
+        }
+        else {
+            squares[i].style.display = 'none';
+        }
+    }
+
+});
+
+hardBtn.addEventListener('click', function() {
+    numSquares = 6;
+    this.classList.add('selected');
+    easyBtn.classList.remove('selected');
+    colors = generateRandomColors(numSquares);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+
+    for (var i = 0; i < squares.length; i++) {
+            squares[i].style.backgroundColor = colors[i];
+            squares[i].style.display = 'block';
+    }
+});
+
+resetBtn.addEventListener('click', function() {
+    colors = generateRandomColors(numSquares);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors";
+    messageDisplay.textContent = "";
+
+    for (var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
-    h1.style.backgroundColor = '#232323';
+    h1.style.backgroundColor = 'steelblue';
 });
 
 colorDisplay.textContent = pickedColor;
