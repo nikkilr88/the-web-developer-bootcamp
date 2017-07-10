@@ -36,6 +36,10 @@ li:hover span{
     opacity: 1;
 }
 
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+
 span {
     display: inline-block;
     background: #e74c3c;
@@ -48,9 +52,6 @@ span {
     transition: 0.2s linear;
 }
 
-li:nth-child(2n) {
-    background: #f7f7f7;
-}
 
 input {
     font-size: 18px;
