@@ -1,6 +1,11 @@
 body {
     font-family: "Roboto";
-    background: #fff;
+    background: #ff9966;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
@@ -26,7 +31,7 @@ li {
     color: #666;
 }
 
-li:nth-child(2n){
+li:nth-child(2n) {
     background: #f7f7f7;
 }
 
@@ -49,10 +54,14 @@ input:focus {
     width: 360px;
     margin: 100px auto;
     background: #f7f7f7;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+.fa-plus {
+    float: right;
 }
