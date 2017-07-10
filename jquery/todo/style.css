@@ -31,6 +31,23 @@ li {
     color: #666;
 }
 
+li:hover span{
+    width: 40px;
+    opacity: 1;
+}
+
+span {
+    display: inline-block;
+    background: #e74c3c;
+    height: 40px;
+    width: 0;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: 0.2s linear;
+}
+
 li:nth-child(2n) {
     background: #f7f7f7;
 }
@@ -41,6 +58,7 @@ input {
     background: #f7f7f7;
     width: 100%;
     padding: 13px 13px 13px 20px;
+    border: 3px solid rgba(0,0,0,0);
     box-sizing: border-box;
 }
 
